@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box container</title>
+    <style>
+        .parentContainer{
+            background-color: lightskyblue;
+            display:flex;
+            /*This enables Flexbox inside a container( should define flex box in parent class).*/
+            /*This makes all direct child elements inside .container flexible.*/
+            flex-direction: reverse;
+            /*Specifies the direction of the flex items inside a flex container*/
+            /* row or column layout */
+            /*values- row(default value), column, row-reverse, column-reverse */
+            flex-wrap:wrap;
+            /*(Wrap Items to Next Line)By default, items stay in one line, even if they overflow.Use flex-wrap to allow wrapping. */
+            /* the flex items will wrap if necessary when resizing the browser window*/ 
+            /*values-nowrap, wrap, wrap-reverse */
+            flex-flow: reverse wrap;
+            /*shorthand property(flex-flow: flex-drection flex-wrap;)*/
+            justify-content: space-around;
+            /*align items horizontacally*/
+            /*values- flex-start (default value, start from left), flex-end, center, space-between, space-around */ 
+
+        }
+        /*The CSS child combinator (>) i s used to select elements that are direct children of a specific parent. 
+
+        Elements matched by the second selector must be the immediate children of the elements matched by the first selector.
+
+        Note: Elements that are not direct children of the specified parent, are not selected. */
+        .parentContainer > div{
+            background-color: aqua;
+            padding:30px;
+            margin:10px;
+            width: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parentContainer">
+        <div>
+            1
+        </div>
+        <div>
+            2
+        </div>
+        <div>
+            3
+        </div>
+        <div>
+            4
+        </div>
+        <div>
+            5
+        </div>
+        <div>
+            6
+        </div>
+        <div>
+            7
+        </div>
+        <div>
+            8
+        </div>
+        <div>
+            9
+        </div>
+    </div>
+</body>
+</html>
